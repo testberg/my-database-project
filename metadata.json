@@ -1,0 +1,4 @@
+{
+  "title": "testing-datasette-csvs",
+  "description_html": "<p>An example of how to run <a href=\"https://datasette.readthedocs.io/\">Datasette</a> on Glitch.</a></p>"
+}
