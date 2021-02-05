@@ -1,0 +1,2 @@
+datasette
+pysqlite3-binary
