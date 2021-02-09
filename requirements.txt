@@ -1,4 +1,4 @@
 datasette
 pysqlite3-binary
+datasette-auth-github
 datasette-cluster-map
-datasette-auth-tokens
