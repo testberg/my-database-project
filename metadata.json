@@ -1,31 +1,17 @@
 {
   "title": "testing-datasette-csvs",
   "description_html": "<p>An example of how to run <a href=\"https://datasette.readthedocs.io/\">Datasette</a> on Glitch.</a></p>",
+  "allow": {
+    "id": "*"
+  },
   "plugins": {
-        "datasette-auth-tokens": {
-            "tokens": [
-                {
-                    "token": {
-                        "$env": "BOT_TOKEN"
-                    },
-                    "actor": {
-                        "bot_id": "my-bot"
-                    }
-                }
-            ]
-        }
-    },
-  "databases": {
-        ":memory:": {
-            "queries": {
-                "show_version": {
-                    "sql": "select sqlite_version()",
-                    "allow": {
-                        "bot_id": "my-bot"
-                    }
-                }
-            }
-        }
+    "datasette-auth-github": {
+      "client_id": {
+        "$env": "DATASETTE_AUTH_GITHUB_CLIENT_ID"
+      },
+      "client_secret": {
+        "$env": "DATASETTE_AUTH_GITHUB_CLIENT_SECRET"
+      }
     }
+  }
 }
-
